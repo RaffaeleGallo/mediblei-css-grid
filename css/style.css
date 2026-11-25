@@ -58,3 +58,8 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+/* Mantiene il titolo di Mostri e ritaglia il fondo con gli sponsor di Itinerari. */
+.post img.post-image-top {
+    object-position: center top;
+}

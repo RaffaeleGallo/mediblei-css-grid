@@ -44,14 +44,16 @@ Controllo: sei immagini in due righe da tre, senza deformazioni. Prova temporane
 
 Le locandine sono contenuti dei post originali usati nell'esercizio, non annunci di nuovi eventi. Per leggere eventuali parti ritagliate, aprire il file originale in `img/`.
 
+Le immagini nei riquadri 3, 4 e 6 provengono dai tre post scelti dallo studente, nello stesso ordine. Per i caroselli è stata utilizzata la prima immagine. Il ritaglio centrale è gestito dal CSS con `object-fit: cover`.
+
 ### Fonti delle immagini
 
 - `incipit.jpg`: https://www.instagram.com/mib_mediblei/p/DgIb8-4CPGh/
 - `saluti-dallo-spazio.jpg`: https://www.instagram.com/mib_mediblei/p/DdrI8IBiLjO/
-- `laboratorio-nina.jpg`: https://www.instagram.com/mib_mediblei/p/DdJmw8moPI6/
-- `cinematti.jpg`: https://www.instagram.com/mib_mediblei/p/Dcbg9ebILu9/
+- `mostra-antonio-vacirca.jpg`: https://www.instagram.com/p/DWbBQ1SiEwF/?img_index=1
+- `mostri-agata-leocata.jpg`: https://www.instagram.com/p/DQWuSpdiLQ_/?img_index=1
 - `capolettera-angelo-ruta.jpg`: https://www.instagram.com/mib_mediblei/p/Db7-HGUoNQW/
-- `tre-soste.jpg`: https://www.instagram.com/mib_mediblei/p/DbqzYA0IHc7/
+- `itinerari-di-coraggio.jpg`: https://www.instagram.com/p/DOYpGIMjCg7/
 
 Commit suggerito: `feat: inserisce immagini Mediblei nella griglia`
 
@@ -65,3 +67,7 @@ Commit suggerito: `feat: inserisce immagini Mediblei nella griglia`
 6. Bonus separato con `grid-column` / `grid-row` e `span`.
 
 Una fase per volta: i commit vengono eseguiti dallo studente.
+
+## Ritaglio delle locandine
+
+Le immagini Mostri e Itinerari di coraggio hanno la classe `post-image-top`: `object-position: center top` allinea il bordo superiore della foto al riquadro. Con `object-fit: cover` il ritaglio verticale avviene quindi in basso: resta visibile il titolo di Mostri e scompare la fascia sponsor di Itinerari. I file originali restano integri.
