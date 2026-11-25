@@ -43,12 +43,18 @@ body {
     margin-top: 16px;
 }
 
-/* Grid item: riquadri provvisori che diventeranno post con immagini. */
+/* Ogni post ha un formato verticale: 4 parti di larghezza e 5 di altezza. */
 .post {
-    min-height: 180px;
-    padding: 16px;
+    aspect-ratio: 4 / 5;
+    min-width: 0;
+    overflow: hidden;
     background-color: #eee;
-    border: 1px solid #ccc;
-    font-size: 24px;
-    text-align: center;
+}
+
+/* L'immagine riempie il post senza deformarsi: l'eccesso viene ritagliato. */
+.post img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

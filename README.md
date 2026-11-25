@@ -28,6 +28,33 @@ Prova nel browser: cambia temporaneamente `repeat(3, 1fr)` in `repeat(2, 1fr)` e
 
 Commit suggerito: `feat: aggiunge griglia a tre colonne con sei post`
 
+## Passo 3: immagini nella griglia
+
+I numeri sono sostituiti da sei immagini scaricate dal profilo Instagram Mediblei e salvate nella cartella `img/`. La pagina può mostrarle anche senza connessione.
+
+- `.post` resta il figlio diretto della griglia; l'immagine è contenuta al suo interno.
+- `aspect-ratio: 4 / 5` determina l'altezza del riquadro in base alla sua larghezza.
+- `min-width: 0` permette alla cella di restringersi anche quando contiene un'immagine grande.
+- `width: 100%` e `height: 100%` fanno occupare all'immagine tutto il riquadro.
+- `object-fit: cover` conserva le proporzioni, ritagliando l'eccesso quando necessario.
+- `display: block` elimina lo spazio di base tipico delle immagini inline.
+- Il padding dei riquadri numerati viene rimosso per portare la foto fino ai bordi.
+
+Controllo: sei immagini in due righe da tre, senza deformazioni. Prova temporaneamente `aspect-ratio: 1 / 1` per vedere il ritaglio, poi ripristina `4 / 5`. Con `object-fit: contain` vedresti invece tutta l'immagine, ma potrebbero restare spazi vuoti.
+
+Le locandine sono contenuti dei post originali usati nell'esercizio, non annunci di nuovi eventi. Per leggere eventuali parti ritagliate, aprire il file originale in `img/`.
+
+### Fonti delle immagini
+
+- `incipit.jpg`: https://www.instagram.com/mib_mediblei/p/DgIb8-4CPGh/
+- `saluti-dallo-spazio.jpg`: https://www.instagram.com/mib_mediblei/p/DdrI8IBiLjO/
+- `laboratorio-nina.jpg`: https://www.instagram.com/mib_mediblei/p/DdJmw8moPI6/
+- `cinematti.jpg`: https://www.instagram.com/mib_mediblei/p/Dcbg9ebILu9/
+- `capolettera-angelo-ruta.jpg`: https://www.instagram.com/mib_mediblei/p/Db7-HGUoNQW/
+- `tre-soste.jpg`: https://www.instagram.com/mib_mediblei/p/DbqzYA0IHc7/
+
+Commit suggerito: `feat: inserisce immagini Mediblei nella griglia`
+
 ## Percorso concordato
 
 1. Struttura iniziale e placeholder superiore.
