@@ -57,6 +57,21 @@ Le immagini nei riquadri 3, 4 e 6 provengono dai tre post scelti dallo studente,
 
 Commit suggerito: `feat: inserisce immagini Mediblei nella griglia`
 
+## Passo 4: profilo Mediblei
+
+Il placeholder è sostituito dal profilo: logo fornito dallo studente, nome, username, biografia e link al sito e a Instagram. La biografia è una sintesi delle attività di Mediblei: libri, arte, incontri culturali e scoperta del territorio, senza riferimenti al genere.
+
+- `img/logo-mediblei.png` è una copia del logo fornito, usata anche come favicon.
+- `border-radius: 50%` rende circolare l'immagine quadrata del profilo.
+- `margin: 0 auto` centra gli elementi a blocco con larghezza definita.
+- `text-align: center` centra i testi.
+- Il collegamento Instagram è un tag `<a>` con aspetto di pulsante: apre il profilo reale nella stessa scheda.
+- `:focus-visible` evidenzia i collegamenti quando si naviga con la tastiera.
+
+Controllo nel browser: logo, nome, biografia e link devono comparire sopra i sei post. Usare Tab per verificare il focus sui link. La griglia e i ritagli delle locandine sono quelli del passo precedente.
+
+Commit suggerito: `feat: completa il profilo Mediblei con logo e biografia`
+
 ## Percorso concordato
 
 1. Struttura iniziale e placeholder superiore.
