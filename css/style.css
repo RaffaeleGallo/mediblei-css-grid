@@ -16,12 +16,12 @@ body {
 .container {
     width: 90%;
     max-width: 900px;
-    margin: 40px auto;
+    margin: 48px auto 64px;
 }
 
 /* Profilo centrato sopra la griglia. */
 .profile {
-    padding: 24px 16px;
+    padding: 24px 16px 32px;
     text-align: center;
 }
 
@@ -30,12 +30,15 @@ body {
     width: 150px;
     height: 150px;
     margin: 0 auto 20px;
+    border: 4px solid #fff;
     border-radius: 50%;
+    box-shadow: 0 0 0 2px #bf1730, 0 6px 18px #00000014;
     object-fit: cover;
 }
 
 .profile h1 {
-    font-size: 28px;
+    font-size: 30px;
+    line-height: 1.2;
 }
 
 .profile-username {
@@ -45,7 +48,12 @@ body {
 
 .profile-bio {
     max-width: 440px;
-    margin: 20px auto 12px;
+    margin: 24px auto 16px;
+    line-height: 1.7;
+}
+
+.profile-bio p + p {
+    margin-top: 4px;
 }
 
 /* Selettore di classe: stile di base del collegamento al sito. */
@@ -103,11 +111,15 @@ body {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    max-width: 100%;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
-.profile-instagram:hover {
+.profile-instagram:hover,
+.profile-instagram:focus-visible {
     background-color: #9e1328;
+    box-shadow: 0 4px 12px #bf173026;
 }
 
 .profile a:focus-visible {
@@ -115,8 +127,22 @@ body {
     outline-offset: 4px;
 }
 
+.profile-instagram:active {
+    background-color: #791020;
+    box-shadow: none;
+}
+
 .posts {
-    margin-top: 32px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e7dadd;
+}
+
+.posts h2 {
+    width: fit-content;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #bf1730;
+    font-size: 20px;
 }
 
 /* Grid container: tre colonne uguali e spazio tra righe e colonne. */
@@ -133,6 +159,7 @@ body {
     min-width: 0;
     overflow: hidden;
     background-color: #eee;
+    border-radius: 6px;
 }
 
 /* L'immagine riempie il post senza deformarsi: l'eccesso viene ritagliato. */
@@ -146,4 +173,54 @@ body {
 /* Mantiene il titolo di Mostri e ritaglia il fondo con gli sponsor di Itinerari. */
 .post img.post-image-top {
     object-position: center top;
+}
+
+/* Tablet e telefoni: due colonne e un profilo più compatto. */
+@media (max-width: 600px) {
+    .container {
+        width: 92%;
+        margin: 24px auto 40px;
+    }
+
+    .profile {
+        padding: 16px 8px 24px;
+    }
+
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile h1 {
+        font-size: 26px;
+    }
+
+    .profile-bio {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Schermi molto stretti: una sola colonna evita miniature troppo piccole. */
+@media (max-width: 360px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-instagram {
+        display: block;
+        padding: 12px 16px;
+    }
+}
+
+/* Rispetta la preferenza di ridurre gli effetti animati. */
+@media (prefers-reduced-motion: reduce) {
+    .profile-website,
+    .profile-instagram {
+        transition: none;
+    }
 }

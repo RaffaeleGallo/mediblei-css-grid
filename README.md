@@ -103,3 +103,19 @@ Le regole hover/focus seguono visited e active è l'ultima: a parità di specifi
 Controllo manuale: passa il mouse sul link, tieni premuto per osservare active, usa Tab per il focus e visita il sito tornando poi alla pagina. Sposta il mouse e il focus per osservare il colore visitato.
 
 Commit suggerito: `style: aggiunge pseudo-classi al link Mediblei`
+
+## Passo 5: rifiniture e responsive
+
+- Spaziature più regolari, bordo rosso e ombra leggera intorno al logo.
+- Separatore sopra i post e sottolineatura rossa del titolo.
+- Angoli leggermente arrotondati sulle immagini.
+- Griglia a tre colonne sopra 600 px, due da 361 a 600 px e una fino a 360 px.
+- Profilo e logo più compatti sui telefoni; proporzioni 4:5 e ritagli delle immagini conservati.
+- Stati del link al sito conservati; hover, focus e active anche sul link Instagram.
+- Transizioni disattivate se il dispositivo richiede movimenti ridotti.
+
+`@media (max-width: 600px)` applica solo le regole interne quando la finestra è larga al massimo 600 pixel CSS. Le regole mobile sono scritte dopo quelle base per sovrascriverle. Il selettore `.profile-bio p + p` aggiunge spazio soltanto ai paragrafi preceduti da un altro paragrafo.
+
+Controlli: 1280 px (tre colonne), 375 px (due), 320 px (una). Verificare assenza di scorrimento orizzontale, logo circolare, titolo Mostri visibile, sponsor fuori dal riquadro Itinerari e focus da tastiera sui link.
+
+Commit suggerito: `style: rifinisce il layout e aggiunge il responsive`
