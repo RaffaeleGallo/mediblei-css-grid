@@ -34,3 +34,21 @@ body {
 .posts {
     margin-top: 32px;
 }
+
+/* Grid container: tre colonne uguali e spazio tra righe e colonne. */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* Grid item: riquadri provvisori che diventeranno post con immagini. */
+.post {
+    min-height: 180px;
+    padding: 16px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    font-size: 24px;
+    text-align: center;
+}

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mediblei | Esercizio CSS Grid</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <main class="container">
         <!-- Il profilo completo verrà aggiunto dopo aver costruito la griglia. -->
@@ -16,8 +18,17 @@
 
         <section class="posts" aria-labelledby="posts-title">
             <h2 id="posts-title">Post</h2>
-            <!-- Nel prossimo passo aggiungeremo sei riquadri e CSS Grid. -->
+            <!-- Solo i figli diretti di questo contenitore sono grid item. -->
+            <div class="posts-grid">
+                <div class="post">1</div>
+                <div class="post">2</div>
+                <div class="post">3</div>
+                <div class="post">4</div>
+                <div class="post">5</div>
+                <div class="post">6</div>
+            </div>
         </section>
     </main>
 </body>
+
 </html>
