@@ -1,0 +1,36 @@
+/* Reset di base: padding e bordi sono inclusi nelle dimensioni. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background-color: #fff;
+}
+
+/* Contenitore centrato, con spazio ai lati anche sugli schermi piccoli. */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* Blocco provvisorio: per ora ci concentriamo sulla struttura. */
+.profile-placeholder {
+    min-height: 240px;
+    padding: 40px 20px;
+    background-color: #eee;
+    text-align: center;
+}
+
+.profile-placeholder p {
+    margin-top: 12px;
+}
+
+.posts {
+    margin-top: 32px;
+}
