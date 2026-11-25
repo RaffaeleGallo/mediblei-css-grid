@@ -175,6 +175,54 @@ body {
     object-position: center top;
 }
 
+/* Bonus: righe regolari, con un elemento che occupa quattro celle. */
+.grid-bonus {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #e7dadd;
+}
+
+.grid-bonus h2 {
+    font-size: 20px;
+}
+
+.grid-bonus p {
+    margin-top: 8px;
+    color: #666;
+}
+
+.bonus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 120px;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.bonus-item {
+    display: grid;
+    place-content: center;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #e8b6bf;
+    border-radius: 6px;
+    background-color: #fff5f6;
+    color: #941127;
+    text-align: center;
+}
+
+.bonus-item strong {
+    font-size: 28px;
+}
+
+/* Queste proprietà vanno sul figlio, non sul contenitore della griglia. */
+.bonus-item-featured {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: #bf1730;
+    color: #fff;
+}
+
 /* Tablet e telefoni: due colonne e un profilo più compatto. */
 @media (max-width: 600px) {
     .container {
@@ -200,14 +248,22 @@ body {
         font-size: 15px;
     }
 
-    .posts-grid {
+    .posts-grid,
+    .bonus-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Ripristina una cella per elemento senza creare colonne implicite. */
+    .bonus-item-featured {
+        grid-column: auto;
+        grid-row: auto;
     }
 }
 
 /* Schermi molto stretti: una sola colonna evita miniature troppo piccole. */
 @media (max-width: 360px) {
-    .posts-grid {
+    .posts-grid,
+    .bonus-grid {
         grid-template-columns: 1fr;
     }
 

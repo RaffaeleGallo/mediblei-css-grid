@@ -119,3 +119,34 @@ Commit suggerito: `style: aggiunge pseudo-classi al link Mediblei`
 Controlli: 1280 px (tre colonne), 375 px (due), 320 px (una). Verificare assenza di scorrimento orizzontale, logo circolare, titolo Mostri visibile, sponsor fuori dal riquadro Itinerari e focus da tastiera sui link.
 
 Commit suggerito: `style: rifinisce il layout e aggiunge il responsive`
+
+## Passo 6: bonus completato — elementi su più celle
+
+Sotto i post, una griglia numerata separata permette di osservare il posizionamento senza alterare i ritagli delle fotografie.
+
+```css
+.bonus-item-featured {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+```
+
+Le proprietà appartengono al figlio: il primo riquadro si estende su due colonne e due righe, occupando quattro celle. `grid-auto-rows: 120px` definisce l'altezza delle righe implicite; il riquadro grande è alto 248 px, cioè due righe da 120 px più il gap di 8 px. Gli altri cinque elementi riempiono automaticamente gli spazi disponibili in ordine HTML.
+
+Schema desktop:
+
+```text
+1 1 2
+1 1 3
+4 5 6
+```
+
+Dentro ogni riquadro, una piccola griglia con `place-content: center` centra il contenuto. Questa griglia interna è indipendente dalla griglia esterna.
+
+Fino a 600 px, `grid-column: auto` e `grid-row: auto` riportano il primo riquadro a una cella singola: due colonne su telefono, una fino a 360 px. Questo evita che span crei colonne extra sugli schermi stretti.
+
+Prova: disattiva solo `grid-row: span 2` per vedere un riquadro largo due colonne ma alto una riga. Poi ripristinalo.
+
+Commit suggerito: `feat: aggiunge il bonus Grid con elementi su più celle`
+
+Percorso completato: struttura, griglia, immagini, profilo, rifiniture responsive e bonus span.
