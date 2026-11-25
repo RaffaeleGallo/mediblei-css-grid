@@ -48,11 +48,50 @@ body {
     margin: 20px auto 12px;
 }
 
+/* Selettore di classe: stile di base del collegamento al sito. */
 .profile-website {
     display: block;
     width: fit-content;
     margin: 0 auto;
-    color: #222;
+    padding: 8px 14px;
+    color: #bf1730;
+    background-color: #fff5f6;
+    border: 1px solid #e8b6bf;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Pseudo-elemento: aggiunge una freccia decorativa dopo il testo. */
+.profile-website::after {
+    content: " →";
+}
+
+/* Ordine: link non visitato, visitato, hover/focus e infine active. */
+.profile-website:link {
+    color: #bf1730;
+}
+
+/* Il browser determina se questo indirizzo risulta già visitato. */
+.profile-website:visited {
+    color: #704080;
+}
+
+/* Stesso risalto con il mouse e con la navigazione da tastiera. */
+.profile-website:hover,
+.profile-website:focus {
+    color: #941127;
+    background-color: #fce3e8;
+    border-color: #bf1730;
+}
+
+/* Si attiva mentre si tiene premuto il collegamento. */
+.profile-website:active {
+    color: #fff;
+    background-color: #941127;
+    border-color: #941127;
 }
 
 /* È un link reale al profilo, presentato come un pulsante. */

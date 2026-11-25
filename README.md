@@ -86,3 +86,20 @@ Una fase per volta: i commit vengono eseguiti dallo studente.
 ## Ritaglio delle locandine
 
 Le immagini Mostri e Itinerari di coraggio hanno la classe `post-image-top`: `object-position: center top` allinea il bordo superiore della foto al riquadro. Con `object-fit: cover` il ritaglio verticale avviene quindi in basso: resta visibile il titolo di Mostri e scompare la fascia sponsor di Itinerari. I file originali restano integri.
+
+## Stati del link al sito: ripasso di css-selettori
+
+Lo stile di `.profile-website` riprende le pseudo-classi di `css-selettori/3-pseudo-classes` e il pseudo-elemento `::after` di `css-selettori/4-pseudo-elements`.
+
+- `:link`: rosso Mediblei per il link non visitato.
+- `:visited`: viola quando il browser considera la destinazione già visitata.
+- `:hover`: testo rosso scuro, sfondo rosa e bordo rosso al passaggio del mouse.
+- `:focus`: stesso risalto quando il link riceve il focus; resta anche il contorno da tastiera già definito con `:focus-visible`.
+- `:active`: testo bianco su rosso scuro durante la pressione. Non è uno stato permanente dopo il click.
+- `::after`: freccia decorativa dopo il testo, senza aggiungere un elemento HTML.
+
+Le regole hover/focus seguono visited e active è l'ultima: a parità di specificità prevale la regola scritta dopo. Il viola del visitato si vede quando il link non è sotto il mouse e non ha il focus. La memorizzazione di visited dipende dal browser e dal contesto di navigazione.
+
+Controllo manuale: passa il mouse sul link, tieni premuto per osservare active, usa Tab per il focus e visita il sito tornando poi alla pagina. Sposta il mouse e il focus per osservare il colore visitato.
+
+Commit suggerito: `style: aggiunge pseudo-classi al link Mediblei`
