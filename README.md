@@ -150,3 +150,17 @@ Prova: disattiva solo `grid-row: span 2` per vedere un riquadro largo due colonn
 Commit suggerito: `feat: aggiunge il bonus Grid con elementi su più celle`
 
 Percorso completato: struttura, griglia, immagini, profilo, rifiniture responsive e bonus span.
+
+## Profilo finale: disposizione come nel riferimento BoolTok
+
+Ordine: titolo Mediblei APS, logo, username, statistiche, azioni Follow/Instagram, biografia e sito. La biografia usa `line-height: 1.3` e nessun margine aggiuntivo fra i paragrafi.
+
+Le statistiche (164 seguiti, 1.9K follower, 12.5K mi piace) sono dati dimostrativi autorizzati per l'esercizio: non sono metriche verificate di Instagram o TikTok.
+
+Follow apre https://www.tiktok.com/@mib_mediblei; non segue automaticamente l'account. Il pulsante affiancato usa un'icona Instagram SVG e apre https://www.instagram.com/mib_mediblei/. Entrambi hanno un nome accessibile e focus visibile. Flexbox gestisce le due righe di statistiche e pulsanti; CSS Grid continua a gestire post e bonus. Gli stati del link al sito restano quelli studiati con css-selettori.
+
+Questa versione sostituisce il precedente pulsante testuale Instagram del passo 4.
+
+Commit suggerito: `style: allinea il profilo al riferimento BoolTok`
+
+Il pulsante con freccia accanto a Instagram riproduce il riferimento grafico. È dimostrativo, senza menu o JavaScript; `aria-disabled="true"` comunica che non offre un’azione.
